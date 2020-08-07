@@ -45,7 +45,7 @@ set :vpc_reandeploy_id, :18878
 set :db_reandeploy_id, :18879
 # Define the HCAP Deploy environment ID for the application sub-project named :app
 #  - HCAP DevSecOps will automatically refer to this variable when deploying the sub-project
-set :app_reandeploy_id, 18880
+set :app_reandeploy_id, :18880
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
