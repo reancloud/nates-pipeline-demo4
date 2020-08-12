@@ -32,7 +32,7 @@ set :app_deploy_tool, :reandeploy
 
 
 # Sets deploy share group to Cloud Architects
-set :hcap_deploy_share_group, -> { "GROUP123" }
+set :hcap_deploy_share_group, -> { "cloud_architects" }
 
 # A list of machine-readable sub-project names.  Each one represents an application
 # sub-project to be deployed, regardless of the deployment tool being used.
