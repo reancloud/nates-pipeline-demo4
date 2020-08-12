@@ -30,6 +30,10 @@ set :cloud_provider, "aws"
 #  - HCAP DevSecOps also supports "per sub-project" deployment tool selection.
 set :app_deploy_tool, :reandeploy
 
+
+# Sets deploy share group to Cloud Architects
+set :hcap_deploy_share_group, -> { "GROUP123" }
+
 # A list of machine-readable sub-project names.  Each one represents an application
 # sub-project to be deployed, regardless of the deployment tool being used.
 #  - HCAP DevSecOps is able to derive many other default settings from a sub-project name.
@@ -93,7 +97,7 @@ set :functional_tests, [
     command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
     git_repository_url: "",
     chrome: "79",
-    firefox: "75"
+    firefox: "63"
   }
 ]
 
@@ -107,7 +111,7 @@ set :load_tests, [
     command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
     git_repository_url: "",
     chrome: "79",
-    firefox: "75"
+    firefox: "63"
   }
 ]
 
