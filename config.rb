@@ -31,7 +31,7 @@ set :cloud_provider, "aws"
 set :app_deploy_tool, :reandeploy
 
 
-# Sets deploy share group to Cloud Architects
+# Sets deploy share group to Cloud Architect
 set :hcap_deploy_share_group, -> { "cloud_architect" }
 
 # A list of machine-readable sub-project names.  Each one represents an application
