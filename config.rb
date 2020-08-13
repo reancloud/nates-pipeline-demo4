@@ -82,7 +82,7 @@ set :server_test_tool, :none
 #  - HCAP DevSecOps will default to running all declared functional tests and load tests against
 #    all declared websites, unless you specifically declare which tests to run against which websites.
 
-website :mysite, protocol: :https, host: "ec2-15-200-113-249.us-gov-west-1.compute.amazonaws.com", path: ""
+website :mysite, protocol: :http, host: "ec2-15-200-113-249.us-gov-west-1.compute.amazonaws.com", path: ""
 
 # A list of HCAP Test functional tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
