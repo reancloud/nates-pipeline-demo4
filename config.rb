@@ -96,7 +96,7 @@ set :functional_tests, [
     firefox: "63"
   }
 ]
-#####
+#
 # A list of HCAP Test load tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
 #    unless you specifically provide an alternative value.
