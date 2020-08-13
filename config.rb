@@ -105,7 +105,7 @@ set :functional_tests, [
 set :load_tests, [
   {
     command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
-    git_repository_url: "https://github.com/reancloud/selenium-spring-application.git",
+    git_repository_url: "",
     chrome: "79",
     firefox: "63"
   }
