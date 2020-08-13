@@ -93,7 +93,7 @@ website :mysite, protocol: :https, host: "ec2-15-200-113-249.us-gov-west-1.compu
 set :functional_tests, [
   {
     command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
-    git_repository_url: "https://github.com/reancloud/selenium-spring-application.git",
+    git_repository_url: "",
     chrome: "79",
     firefox: "63"
   }
