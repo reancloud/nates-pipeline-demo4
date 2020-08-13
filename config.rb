@@ -82,7 +82,7 @@ set :server_test_tool, :none
 #  - HCAP DevSecOps will default to running all declared functional tests and load tests against
 #    all declared websites, unless you specifically declare which tests to run against which websites.
 
-# website :mysite, protocol: :http, host: "ec2-15-200-113-249.us-gov-west-1.compute.amazonaws.com", path: ""
+website :mysite, protocol: :https, host: "ec2-15-200-113-249.us-gov-west-1.compute.amazonaws.com", path: ""
 
 # A list of HCAP Test functional tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
@@ -90,20 +90,21 @@ set :server_test_tool, :none
 #  - HCAP DevSecOps automatically loads Git credentials from the GIT_USER and GIT_PASS environment
 #    variables, unless you specifically provide alternative values.
 
-#set :functional_tests, [
-#  {
-#    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
-#    git_repository_url: "",
-#    chrome: "79",
-#    firefox: "63"
-#  }
-#]
+set :functional_tests, [
+  {
+    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
+    git_repository_url: "https://github.com/reancloud/selenium-spring-application.git",
+    chrome: "79",
+    firefox: "63"
+  }
+]
 
 # A list of HCAP Test load tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
 #    unless you specifically provide an alternative value.
 #  - HCAP DevSecOps automatically loads Git credentials from the GIT_USER and GIT_PASS environment
 #    variables, unless you specifically provide alternative values.
+######
 #set :load_tests, [
 #  {
 #    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
@@ -116,6 +117,8 @@ set :server_test_tool, :none
 # A list of HCAP Test security tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
 #    unless you specifically provide an alternative value.
+
+######
 #set :security_tests, [
 #  {
 #    username_field_xpath: "//input[@id='login']",
